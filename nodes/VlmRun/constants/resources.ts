@@ -71,4 +71,32 @@ export const commonResourceProperties: INodeProperties[] = [
         required: true,
         noDataExpression: true,
     },
+    {
+        displayName: 'Process Asynchronously',
+        name: 'processAsynchronously',
+        type: 'boolean',
+        displayOptions: {
+            show: {
+                resource: [Resource.DOCUMENT, Resource.AUDIO, Resource.VIDEO],
+            },
+        },
+        default: true,
+        description: 'When enabled, the request will be processed asynchronously and require a callback URL',
+        noDataExpression: true,
+    },
+    {
+        displayName: 'Callback URL',
+        name: 'callbackUrl',
+        type: 'string',
+        displayOptions: {
+            show: {
+                resource: [Resource.DOCUMENT, Resource.AUDIO, Resource.VIDEO],
+                processAsynchronously: [true],
+            },
+        },
+        default: '',
+        required: true,
+        description: 'URL to receive the callback when processing is complete',
+        placeholder: 'https://your-webhook-url.com/callback',
+    },
 ]; 
