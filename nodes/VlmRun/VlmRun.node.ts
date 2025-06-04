@@ -85,7 +85,7 @@ export class VlmRun implements INodeType {
 							model,
 							domain,
 							batch: processAsynchronously,
-							callback_url: callbackUrl
+							callbackUrl: callbackUrl
 						};
 
 						let initialResponse;

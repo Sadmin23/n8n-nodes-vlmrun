@@ -11,7 +11,7 @@ export class PredictionService extends BaseService {
                 model: request.model,
                 domain: request.domain as string,
                 batch: request.batch,
-                callback_url: request.callback_url,
+                callbackUrl: request.callbackUrl,
             });
             return generateResponse as PredictionResponse;
         } catch (error) {
@@ -26,7 +26,7 @@ export class PredictionService extends BaseService {
                 model: request.model,
                 domain: request.domain as string,
                 batch: request.batch,
-                callback_url: request.callback_url,
+                callbackUrl: request.callbackUrl,
             });
             return response as PredictionResponse;
         } catch (error) {
@@ -41,7 +41,7 @@ export class PredictionService extends BaseService {
                 model: request.model,
                 domain: request.domain as string,
                 batch: request.batch,
-                callback_url: request.callback_url,
+                callbackUrl: request.callbackUrl,
             });
             return response as PredictionResponse;
         } catch (error) {

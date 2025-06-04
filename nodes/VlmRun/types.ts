@@ -6,7 +6,7 @@ export interface FileRequest {
 	domain?: string;
 	batch?: boolean;
 	session_id?: string;
-	callback_url?: string;
+	callbackUrl?: string;
 }
 
 export interface ImageRequest {
